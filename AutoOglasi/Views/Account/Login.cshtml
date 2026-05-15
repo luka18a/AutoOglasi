@@ -4,27 +4,33 @@
 
 <div class="row justify-content-center mt-5">
     <div class="col-md-4">
-        <h2 class="text-center mb-4">Prijava</h2>
-
-        @if (ViewBag.Error != null)
-        {
-            <div class="alert alert-danger">@ViewBag.Error</div>
-        }
-
-        <form method="post">
-            <div class="mb-3">
-                <label class="form-label">Korisničko ime</label>
-                <input type="text" name="username" class="form-control" required />
+        <div class="card shadow border-0 p-4">
+            <div class="text-center mb-3">
+                <span style="font-size: 3rem;">🚗</span>
+                <h3 class="fw-bold mt-2">Prijavi se</h3>
+                <p class="text-muted">Dobrodošao nazad!</p>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Lozinka</label>
-                <input type="password" name="password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Prijavi se</button>
-        </form>
 
-        <p class="text-center mt-3">
-            Nemaš nalog? <a href="/Account/Register">Registruj se</a>
-        </p>
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Korisničko ime</label>
+                    <input type="text" name="username" class="form-control rounded-pill px-3" required />
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Lozinka</label>
+                    <input type="password" name="password" class="form-control rounded-pill px-3" required />
+                </div>
+                <button type="submit" class="btn btn-primary w-100 rounded-pill">Prijavi se</button>
+            </form>
+
+            <p class="text-center mt-3 text-muted">
+                Nemaš nalog? <a href="/Account/Register">Registruj se</a>
+            </p>
+        </div>
     </div>
 </div>
